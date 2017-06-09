@@ -1,0 +1,14 @@
+# Ejemplos básicos de Ansible
+
+* Es necesario tener instalado Ansible en el nodo controlador.
+* Las máquinas controladas sólo tienen que tener Python instalado. 
+
+## Ejemplos
+
+* [Update && Upgrade](./01actualizar.yml)
+* [Crear un directorio y descargar un archivo](./02descargar_logo.yml)
+* [Instalación de un paquete](./03instalar_map.yml)
+* [Instalación de varios paquetes](./04instalar_varios.yml)
+* [Operaciones con archivos (copia, permisos, descomprimir, añadir texto, ...)](./05files.yml)
+* [Git](./06git.yml)
+

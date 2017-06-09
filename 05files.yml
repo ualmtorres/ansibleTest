@@ -1,0 +1,43 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Copy file
+    copy:
+      src: /home/ubuntu/foo.conf
+      dest: /home/ubuntu/foo.conf
+      owner: ubuntu
+      group: ubuntu
+      mode: 0644
+
+  - name: Add line to file
+    lineinfile:
+      name: /home/ubuntu/foo.conf
+      line: 'SELINUX=nothing'
+
+  - name: Replace text in file using REGEXP
+    lineinfile:
+      name: /home/ubuntu/foo.conf
+      regexp: '^SELINUX='
+      line: 'SELINUX=enforcing'
+#      owner: root
+#      group: root
+#      mode: 0644
+
+  - name: Download file
+    get_url:
+      url: http://bdlsi.ual.es/archivos/DIUALAzul%20height%2035.png
+      dest: /home/ubuntu/logo.png
+      mode: 0440
+
+  - name: Remote untar file
+    unarchive:
+      src: /home/ubuntu/saludo.tar
+      dest: /home/ubuntu/
+
+  - name: Insert text after a line
+    lineinfile:
+      name: /home/ubuntu/saludo.txt
+      regexp: '^Hola'
+      insertafter: '^Hello'
+      line: 'Hola amigo'

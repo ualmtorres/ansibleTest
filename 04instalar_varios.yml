@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  vars:
+     packages: ['git','curl']
+  tasks:
+     - name: Instalar lista de paquetes
+       apt: name={{ item }} state=latest
+       with_items: packages 
+
+

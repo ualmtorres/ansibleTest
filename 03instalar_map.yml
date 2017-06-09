@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+     - name: Actualizar cache de paquetes
+       apt: 
+         update_cache: yes
+       become: true
+
+     - name: Instalar nmap
+       apt: 
+         name: nmap
+         state: latest
+       become: true

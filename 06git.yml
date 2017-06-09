@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  - name: Clone a git repo
+    git:
+      repo: 'https://github.com/ualmtorres/OpenStackTecnicosDI.git'
+      clone: yes
+      dest: /home/ubuntu/OpenStackTecnicosDI
+      version: 'gh-pages'
+
