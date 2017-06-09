@@ -1,10 +1,14 @@
 # Ejemplos básicos de Ansible
 
+Requisitos previos:
+
 * Es necesario tener instalado Ansible en el nodo controlador.
 * Las máquinas controladas sólo tienen que tener Python instalado. 
-* Modifica el archivo hosts.cfg con los servidores que quieres configurar
+* Modifica el archivo `hosts.cfg` con los servidores que quieres configurar
 
-## Operaciones básicas
+
+## Operaciones básicas
+
 
 ### Comprobar conexión con hosts a configurar
 
